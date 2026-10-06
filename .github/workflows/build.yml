@@ -18,10 +18,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install SpeechRecognition pyaudio pyttsx3 pyautogui psutil pyinstaller
+          pip install SpeechRecognition pyaudio pyautogui psutil pyinstaller
 
       - name: Build exe
-        run: python -m PyInstaller --onefile --name JARVIS jarvis_pc.py
+        run: python -m PyInstaller --onefile --noconsole --name JARVIS jarvis_gui.py
 
       - name: Upload exe
         uses: actions/upload-artifact@v4
